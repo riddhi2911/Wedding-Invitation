@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>પ્રિયાંશ સંગ શ્રેયા | લગ્ન નિમંત્રણ પત્રિકા</title>
+  
+  <meta name="description" content="પ્રિયાંશ અને શ્રેયા લગ્ન નિમંત્રણ પત્રિકા. ૨૨ નવેમ્બર ૨૦૨૬, શ્રી નમેન માતાજી મંદિર, કમલી રોડ, ઊંઝા, મહેસાણા, ગુજરાત.">
+  <meta name="theme-color" content="#220308">
+  
+  <!-- Favicon / Crest -->
+  <link rel="icon" type="image/jpeg" href="images/sp_seal.jpg">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-rajputana-pattern">
+
+  <!-- =========================================================================
+       CANVAS PARTICLES (FLOATING GOLD DUST & ROSE PETALS)
+       ========================================================================= -->
+  <canvas id="gold-dust-canvas"></canvas>
+  <canvas id="petals-canvas"></canvas>
+
+  <!-- =========================================================================
+       1. OPENING EXPERIENCE — PALACE ENTRANCE & WAX SEAL STAMP
+       ========================================================================= -->
+  <section id="royal-entrance" aria-label="Palace Gate Entrance">
+    <!-- Atmospheric Background with Cinematic Drift -->
+    <div class="entrance-bg-wrapper">
+      <img src="images/palace_entrance.jpg" alt="Grand Rajasthani Palace Entrance" class="entrance-bg-image">
+    </div>
+    
+    <!-- Deep Vignette Layer -->
+    <div class="entrance-vignette"></div>
+
+    <!-- 3D Palace Doors (Left & Right halves) -->
+    <div class="palace-doors-portal" aria-hidden="true">
+      <div class="palace-door door-left">
+        <div class="door-carving-overlay"></div>
+        <div class="door-handle"></div>
+      </div>
+      <div class="palace-door door-right">
+        <div class="door-carving-overlay"></div>
+        <div class="door-handle"></div>
+      </div>
+    </div>
+
+    <!-- Golden Radiant Light Flash on Opening -->
+    <div class="royal-flash-burst" aria-hidden="true"></div>
+
+    <!-- Centered Stamp & Interaction Zone -->
+    <div class="stamp-stage">
+      <div class="royal-seal-badge" data-i18n="entranceHeader">પટેલ પરિવાર લગ્ન નિમંત્રણ પત્રિકા</div>
+      <p class="royal-seal-sub" data-i18n="entranceSubheader">પ્રેમ અને પરંપરાનો ભવ્ય મંગલોત્સવ</p>
+
+      <!-- SP Wax Seal Button -->
+      <div class="stamp-container" id="royal-stamp-trigger" role="button" tabindex="0" aria-label="Open the Wedding Invitation">
+        <div class="stamp-aura"></div>
+        <div class="stamp-pulse-ring"></div>
+        <div class="stamp-image-disc">
+          <img src="images/sp_seal.jpg" alt="SP Wedding Seal">
+        </div>
+      </div>
+
+      <!-- Elegant Instruction -->
+      <div class="stamp-instruction-wrap">
+        <button class="stamp-action-btn" id="stamp-btn-action">
+          <span class="btn-diya">🪔</span>
+          <span data-i18n="sealInstruction">પ્રવેશવા માટે મહોર પર સ્પર્શ કરો</span>
+        </button>
+        <span class="stamp-sub-hint" data-i18n="sealSubInstruction">ભવ્ય હવેલી મહેલમાં આપનું હાર્દિક સ્વાગત છે</span>
+      </div>
+    </div>
+
+    <!-- Flickering Corner Diyas -->
+    <div class="entrance-corner-diyas" aria-hidden="true">
+      <div class="corner-diya-item">
+        <svg class="diya-flame-svg" viewBox="0 0 30 50">
+          <defs>
+            <radialGradient id="flameGrad1" cx="50%" cy="80%" r="50%">
+              <stop offset="0%" stop-color="#ffffff" />
+              <stop offset="30%" stop-color="#ffcc00" />
+              <stop offset="70%" stop-color="#ff6600" />
+              <stop offset="100%" stop-color="transparent" />
+            </radialGradient>
+          </defs>
+          <path d="M15 0 C25 20 28 35 15 50 C2 35 5 20 15 0 Z" fill="url(#flameGrad1)" />
+        </svg>
+        <svg class="diya-base-svg" viewBox="0 0 60 25">
+          <ellipse cx="30" cy="12" rx="28" ry="10" fill="#a07828" stroke="#d4af37" stroke-width="2" />
+        </svg>
+      </div>
+
+      <div class="corner-diya-item">
+        <svg class="diya-flame-svg" viewBox="0 0 30 50">
+          <defs>
+            <radialGradient id="flameGrad2" cx="50%" cy="80%" r="50%">
+              <stop offset="0%" stop-color="#ffffff" />
+              <stop offset="30%" stop-color="#ffcc00" />
+              <stop offset="70%" stop-color="#ff6600" />
+              <stop offset="100%" stop-color="transparent" />
+            </radialGradient>
+          </defs>
+          <path d="M15 0 C25 20 28 35 15 50 C2 35 5 20 15 0 Z" fill="url(#flameGrad2)" />
+        </svg>
+        <svg class="diya-base-svg" viewBox="0 0 60 25">
+          <ellipse cx="30" cy="12" rx="28" ry="10" fill="#a07828" stroke="#d4af37" stroke-width="2" />
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       NAVIGATION BAR
+       ========================================================================= -->
+  <header class="royal-navbar" id="royal-navbar">
+    <div class="nav-container">
+      <a href="#hero-palace-hall" class="nav-brand-logo">
+        <div class="nav-monogram-circle">SP</div>
+        <span class="nav-brand-text">પ્રિયાંશ અને શ્રેયા</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu-links" id="nav-menu-links">
+          <li><a href="#hero-palace-hall" class="nav-link" data-i18n="navHome">પ્રવેશ</a></li>
+          <li><a href="#invitation-panel" class="nav-link" data-i18n="navInvitation">કંકોતરી</a></li>
+          <li><a href="#ceremonies-section" class="nav-link" data-i18n="navCeremonies">કાર્યક્રમો</a></li>
+          <li><a href="#venue-section" class="nav-link" data-i18n="navVenue">લગ્ન સ્થળ</a></li>
+          <li><a href="#countdown-section" class="nav-link" data-i18n="navCountdown">શુભ ઘડી</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Bilingual Language Switcher Button (Shows English as site defaults to Gujarati) -->
+        <button class="lang-switch-btn" id="lang-toggle-btn" aria-label="Switch Language">
+          <span>❖</span> <span data-i18n="langToggle">English</span>
+        </button>
+
+        <!-- Background Music Button -->
+        <button class="music-toggle-btn" id="music-toggle-btn" aria-label="Play Music">
+          <div class="sound-bars-wave">
+            <span class="sound-bar"></span>
+            <span class="sound-bar"></span>
+            <span class="sound-bar"></span>
+            <span class="sound-bar"></span>
+          </div>
+          <span id="music-label" data-i18n="musicPlay">સંગીત શરૂ કરો</span>
+        </button>
+
+        <!-- Mobile Drawer Toggle -->
+        <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle Navigation Menu">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       2. PALACE HALL — MAIN HERO SECTION & ANIMATED WEDDING COUPLE
+       ========================================================================= -->
+  <main>
+    <section id="hero-palace-hall" class="royal-section">
+      <!-- Grand Palace Hall Interior Backdrop -->
+      <div class="hero-hall-bg">
+        <img src="images/palace_hall.jpg" alt="Grand Darbar Hall of Rajasthani Mahal">
+      </div>
+
+      <div class="hero-content-wrapper">
+        <!-- Auspicious Shubh Vivah & Sloka -->
+        <div class="auspicious-invitation-badge">
+          <span class="shubh-vivah-tag" data-i18n="shubhVivah">॥ શુભ વિવાહ ॥</span>
+        </div>
+
+        <p class="ganesh-shlok-text" data-i18n="ganeshVandana">
+          वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ । निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥
+        </p>
+
+        <!-- Jharokha Arched Frame with Animated Wedding Couple -->
+        <div class="couple-frame-stage">
+          <div class="jharokha-arch-border">
+            <div class="couple-aura-glow"></div>
+            <div class="jharokha-inner-photo">
+              <img src="images/couple.jpg" alt="Wedding Couple Priyansh and Shreya" class="couple-main-img">
+            </div>
+            <!-- Flanking Miniature Diyas -->
+            <div class="jharokha-side-diya left">🪔</div>
+            <div class="jharokha-side-diya right">🪔</div>
+          </div>
+        </div>
+
+        <!-- Prominent Couple Names Typography -->
+        <div class="couple-royal-names">
+          <h1 class="name-groom" data-i18n="groomName">પ્રિયાંશ</h1>
+          <div class="weds-divider">
+            <span class="weds-line"></span>
+            <span class="weds-text" data-i18n="wedsText">સંગ</span>
+            <span class="weds-line"></span>
+          </div>
+          <h1 class="name-bride" data-i18n="brideName">શ્રેયા</h1>
+        </div>
+
+        <!-- Emotional Invitation Subtext -->
+        <p class="hero-invitation-subtext" data-i18n="heroInviteText">
+          પરિવારના આશીર્વાદ સાથે, તેઓ આપ સૌને તેમના દાંપત્ય જીવનની મંગલ શરૂઆતમાં ભાવભર્યું આમંત્રણ પાઠવે છે.
+        </p>
+
+        <div class="hero-wedding-date" data-i18n="weddingDateHero">
+          ૨૨ નવેમ્બર ૨૦૨૬ • ઊંઝા, મહેસાણા
+        </div>
+
+        <!-- Scroll Down Cue -->
+        <a href="#invitation-panel" class="scroll-indicator-wrap">
+          <span class="scroll-lotus-icon">🪷</span>
+          <span data-i18n="scrollHint">મંગલ ઉત્સવમાં આગળ વધો</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         3. INVITATION CARD / FARMAN PANEL
+         ========================================================================= -->
+    <section id="invitation-panel" class="royal-section">
+      <div class="royal-section-container">
+        <div class="farman-scroll-card">
+          <!-- Ornate Filigree Corners -->
+          <div class="farman-corner corner-tl"></div>
+          <div class="farman-corner corner-tr"></div>
+          <div class="farman-corner corner-bl"></div>
+          <div class="farman-corner corner-br"></div>
+
+          <div class="farman-content">
+            <div class="farman-ganesh-icon">ॐ</div>
+            <div class="section-pre-title" data-i18n="rsvpLabel">સ્નેહાધીન નિમંત્રક</div>
+            <h2 class="farman-blessing-header" data-i18n="invitationHeading">પરિવારના મંગલ આશીર્વાદ સાથે</h2>
+            
+            <div class="royal-mandala-divider">
+              <span class="divider-line"></span>
+              <span class="divider-icon">❖</span>
+              <span class="divider-line"></span>
+            </div>
+
+            <p class="farman-body-text" data-i18n="invitationBody1">
+              સ્નેહ અને લાગણીના આ મંગલ અવસરે, અમારા પ્રિય સંતાનો પ્રિયાંશ અને શ્રેયાના પ્રભુતામાં પગલાં પાડવાના આ પાવન પ્રસંગે આપના આશીર્વાદ અને સ્નેહપૂર્ણ ઉપસ્થિતિની અભ્યર્થના કરીએ છીએ.
+            </p>
+            <p class="farman-body-text" data-i18n="invitationBody2">
+              આપની પાવન ઉપસ્થિતિ અમારા આ મહોત્સવને વિશેષ બનાવશે અને વર-વધૂને અખંડ સૌભાગ્યના આશીર્વાદ આપશે.
+            </p>
+
+            <!-- Family Tributes -->
+            <div class="families-tribute-grid">
+              <!-- Groom's Family: Uperiya family -->
+              <div class="family-tribute-card">
+                <div class="family-role-tag" data-i18n="hostsGroom">વર પક્ષ પરિવાર</div>
+                <div class="family-names-list" data-i18n="groomFamilyNames">
+                  ઉપેરીયા પરિવાર
+                </div>
+              </div>
+              
+              <!-- Bride's Family: Palasariya family -->
+              <div class="family-tribute-card">
+                <div class="family-role-tag" data-i18n="hostsBride">કન્યા પક્ષ પરિવાર</div>
+                <div class="family-names-list" data-i18n="brideFamilyNames">
+                  પલાસરિયા પરિવાર
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. CEREMONIES SECTION (THE RASAMS)
+         ========================================================================= -->
+    <section id="ceremonies-section" class="royal-section">
+      <div class="royal-section-container">
+        <div class="section-header-block">
+          <div class="section-pre-title">શુભ મહોત્સવ</div>
+          <h2 class="section-main-title" data-i18n="ceremoniesHeading">લગ્નોત્સવના શુભ કાર્યક્રમો</h2>
+          <p class="section-sub-title" data-i18n="ceremoniesSubtitle">મંગળ ધાર્મિક વિધિઓ અને ઉલ્લાસમય ઉત્સવની રૂપરેખા</p>
+          <div class="royal-mandala-divider">
+            <span class="divider-line"></span>
+            <span class="divider-icon">🪔</span>
+            <span class="divider-line"></span>
+          </div>
+        </div>
+
+        <!-- Dynamic Container for 5 Ceremonies (No Add-to-Calendar) -->
+        <div class="ceremonies-cards-container" id="ceremonies-container">
+          <!-- Populated by JavaScript from weddingData.ceremonies -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. VENUE SECTION (WEDDING DESTINATION)
+         ========================================================================= -->
+    <section id="venue-section" class="royal-section">
+      <div class="royal-section-container">
+        <div class="section-header-block">
+          <div class="section-pre-title">પવિત્ર લગ્ન સ્થળ</div>
+          <h2 class="section-main-title" data-i18n="venueHeading">લગ્ન સ્થળ</h2>
+          <p class="section-sub-title" data-i18n="venueSubtitle">જ્યાં પરંપરા અને ભવ્યતાનું અનોખું મિલન થાય છે</p>
+          <div class="royal-mandala-divider">
+            <span class="divider-line"></span>
+            <span class="divider-icon">🛕</span>
+            <span class="divider-line"></span>
+          </div>
+        </div>
+
+        <div class="venue-card-wrapper">
+          <div class="venue-info-block">
+            <div class="venue-palace-icon">🛕</div>
+            <span class="venue-title-sub" data-i18n="venueHeading">લગ્ન સ્થળ</span>
+            <h3 class="venue-destination-name" data-i18n="venuePlace">શ્રી નમેન માતાજી મંદિર, કમલી રોડ</h3>
+            <p class="venue-district-name" data-i18n="venueDist">ઊંઝા, જિલ્લો મહેસાણા, ગુજરાત</p>
+
+            <div class="venue-directions-card">
+              <h4 class="venue-directions-title" data-i18n="directionsLabel">સ્થળ માર્ગદર્શન</h4>
+              <p class="venue-directions-desc" data-i18n="directionsText">
+                શ્રી નમેન માતાજી મંદિર, કમલી રોડ, ઊંઝા ખાતે આપનું ઉષ્માભર્યું સ્વાગત છે. આપના આગમન માટે ઉત્તમ વ્યવસ્થા કરવામાં આવી છે.
+              </p>
+            </div>
+
+            <div class="venue-action-buttons">
+              <a href="https://www.google.com/maps/search/?api=1&query=Namen+Mataji+Mandir+Kamli+Road+Unjha+Mehsana+Gujarat" target="_blank" rel="noopener noreferrer" class="btn-royal-primary">
+                <span>📍</span> <span data-i18n="viewMapBtn">ગૂગલ મેપ્સમાં જુઓ</span>
+              </a>
+              <button class="btn-royal-secondary" id="copy-address-btn">
+                <span>📋</span> <span data-i18n="copyAddressBtn">સરનામું કોપી કરો</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Real Temple Photo Frame -->
+          <div class="venue-map-frame">
+            <img src="images/Temple img.png" alt="આદ્યશક્તિ શ્રી નમેન માતાજી મંદિર, કમલી રોડ, ઊંઝા" class="venue-map-visual">
+            <div class="venue-image-badge">
+              <span class="temple-name-tag">આદ્યશક્તિ શ્રી નમેન માતાજી મંદિર • ઊંઝા</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. WEDDING COUNTDOWN SECTION
+         ========================================================================= -->
+    <section id="countdown-section" class="royal-section">
+      <div class="royal-section-container">
+        <div class="section-header-block">
+          <div class="section-pre-title">શુભ મુહૂર્ત</div>
+          <h2 class="section-main-title" data-i18n="countdownHeading">મંગલ ઉત્સવ શરૂ થવામાં બાકી સમય</h2>
+          <p class="section-sub-title" data-i18n="countdownSubtitle">૨૨ નવેમ્બર ૨૦૨૬ ની શુભ ઘડીની આતુરતાપૂર્વક રાહ</p>
+          <div class="royal-mandala-divider">
+            <span class="divider-line"></span>
+            <span class="divider-icon">⏳</span>
+            <span class="divider-line"></span>
+          </div>
+        </div>
+
+        <div class="countdown-boxes-grid">
+          <div class="countdown-box-card">
+            <span class="countdown-num-val" id="cd-days">00</span>
+            <span class="countdown-label-text" id="lbl-days">દિવસ</span>
+          </div>
+          <div class="countdown-box-card">
+            <span class="countdown-num-val" id="cd-hours">00</span>
+            <span class="countdown-label-text" id="lbl-hours">કલાક</span>
+          </div>
+          <div class="countdown-box-card">
+            <span class="countdown-num-val" id="cd-minutes">00</span>
+            <span class="countdown-label-text" id="lbl-minutes">મિનિટ</span>
+          </div>
+          <div class="countdown-box-card">
+            <span class="countdown-num-val" id="cd-seconds">00</span>
+            <span class="countdown-label-text" id="lbl-seconds">સેકન્ડ</span>
+          </div>
+        </div>
+
+        <div id="cd-live-banner" class="countdown-live-banner"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. FINAL FINALE SCENE
+         ========================================================================= -->
+    <section id="royal-finale" class="royal-section">
+      <!-- Panoramic Lit Palace with Fireworks and Lanterns -->
+      <div class="finale-bg-image-wrapper">
+        <img src="images/palace_finale.jpg" alt="Night Celebration with Lanterns & Fireworks">
+      </div>
+
+      <div class="finale-content-stage">
+        <div class="finale-monogram-emblem">SP</div>
+        <h2 class="finale-names-title" data-i18n="finaleTitle">પ્રિયાંશ સંગ શ્રેયા</h2>
+        <div class="finale-date-badge" data-i18n="finaleDate">૨૨ નવેમ્બર ૨૦૨૬</div>
+        <p class="finale-quote-text" data-i18n="finaleSubtitle">એક નવો મંગલ અધ્યાય શરૂ થાય છે...</p>
+        <p class="finale-blessing-wish" data-i18n="finaleWish">
+          ઈશ્વર બંનેના દાંપત્ય જીવનને પ્રેમ, સદભાવ અને અનંત આનંદથી સદા પ્રફુલ્લિત રાખે.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="royal-palace-footer">
+    <p>પટેલ પરિવાર લગ્ન નિમંત્રણ • પ્રિયાંશ અને શ્રેયા • ૨૨ નવેમ્બર ૨૦૨૬</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/translations.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
