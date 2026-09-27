@@ -35,30 +35,30 @@ const weddingData = {
   },
   ceremonies: [
     {
-      id: "grah-shanti",
+      id: "ganesh-sthapana",
       name: {
-        gu: "ગ્રહ શાંતિ",
-        en: "Grah Shanti"
+        gu: "ગણેશ સ્થાપના",
+        en: "Ganesh Sthapana"
       },
       tagline: {
-        gu: "નવગ્રહ પૂજન અને દૈવી આશીર્વાદ",
-        en: "Divine Invocation of Blessings"
+        gu: "શ્રી ગણેશ સ્થાપના અને મંગલ પૂજન",
+        en: "Auspicious Invocation of Lord Ganesha"
       },
       date: {
         gu: "શનિવાર, ૨૧ નવેમ્બર ૨૦૨૬",
         en: "Saturday, 21 November 2026"
       },
       time: {
-        gu: "સવારે ૧૦:૩૦ કલાકે",
-        en: "10:30 AM Onwards"
+        gu: "સવારે ૮:૦૦ કલાકે",
+        en: "08:00 AM Onwards"
       },
       address: {
         gu: "વરવાડા, ઊંઝા, મહેસાણા",
         en: "Varavada, Unjha, Mehsana"
       },
       description: {
-        gu: "શ્રી ગણેશજી અને નવગ્રહ દેવતાઓની કૃપાથી દાંપત્ય જીવનમાં સુખ, શાંતિ અને સમૃદ્ધિના મંગલ આશીર્વાદ અર્થે પાવન પૂજન.",
-        en: "Invoking the divine grace of Lord Ganesha and the Navagrahas to bestow harmony, peace, and auspicious energy upon the sacred union."
+        gu: "શ્રી ગણેશજીની સ્થાપના અને પાવન પૂજન સાથે વિવાહ મહોત્સવનો શુભારંભ, દાંપત્ય જીવનમાં સુખ, શાંતિ અને સમૃદ્ધિના મંગલ આશીર્વાદ અર્થે.",
+        en: "Auspicious installation and worship of Lord Ganesha to bless the wedding festivities with peace, harmony, and prosperity."
       },
       image: "images/ceremony_grahshanti.jpg",
       symbol: "🪔"
@@ -66,8 +66,8 @@ const weddingData = {
     {
       id: "mameru",
       name: {
-        gu: "મામેરું (મોસાળું)",
-        en: "Mameru"
+        gu: "મામેરું (ઉંઝિયા પરિવાર)",
+        en: "Mameru (Unjiya Family)"
       },
       tagline: {
         gu: "મોસાળ પક્ષનું વાત્સલ્ય અને મંગલ શુકન",
@@ -86,8 +86,8 @@ const weddingData = {
         en: "Varavada, Unjha, Mehsana"
       },
       description: {
-        gu: "મામા-મામી અને મોસાળ પક્ષ દ્વારા પરંપરાગત વસ્ત્રો, આભૂષણો અને હેતભર્યા શુકન સાથે કન્યાને આપવાના સ્નેહપૂર્ણ આશીર્વાદ.",
-        en: "A joyous celebration honoring the maternal uncles and family who arrive bearing auspicious traditional gifts, Bandhani, and heartfelt blessings."
+        gu: "મામા-મામી અને મોસાળ પક્ષ (ઉંઝિયા પરિવાર) દ્વારા પરંપરાગત વસ્ત્રો, આભૂષણો અને હેતભર્યા શુકન સાથે વરને આપવાના સ્નેહપૂર્ણ આશીર્વાદ.",
+        en: "A joyous celebration honoring the maternal family (Unjiya Family) who arrive bearing auspicious traditional gifts and heartfelt blessings for the groom."
       },
       image: "images/ceremony_mameru.jpg",
       symbol: "🎁"
@@ -115,8 +115,8 @@ const weddingData = {
         en: "Varavada, Unjha, Mehsana"
       },
       description: {
-        gu: "સુગંધિત હળદર, તાજા ગલગોટાના પુષ્પો અને મંગલ ગીતોના મધુર સૂર વચ્ચે વર-કન્યાને શુકનની પીઠી ચોળવાનો ઉલ્લાસમય ઉત્સવ.",
-        en: "An exuberant celebration soaked in golden turmeric, vibrant marigold petals, traditional folk songs, and joyous laughter."
+        gu: "સુગંધિત હળદર, તાજા ગલગોટાના પુષ્પો અને મંગલ ગીતોના મધુર સૂર વચ્ચે વરને શુકનની પીઠી ચોળવાનો ઉલ્લાસમય ઉત્સવ.",
+        en: "An exuberant celebration soaked in golden turmeric, vibrant marigold petals, and joyous folk songs as auspicious haldi is applied to the groom."
       },
       image: "images/ceremony_haldi.jpg",
       symbol: "🌼"
@@ -136,16 +136,13 @@ const weddingData = {
         en: "Sunday, 22 November 2026"
       },
       time: {
-        gu: "સાંજે ૬:૩૦ કલાકે",
-        en: "06:30 PM"
+        gu: "સવારે ૬:૩૦ કલાકે",
+        en: "06:30 AM"
       },
-      address: {
-        gu: "વરવાડા, ઊંઝા, મહેસાણા",
-        en: "Varavada, Unjha, Mehsana"
-      },
+      address: null,
       description: {
-        gu: "શણગારેલા અશ્વ, ઢોલ-નગારા, શરણાઈના નાદ અને આતશબાજીની ભવ્ય રોશની વચ્ચે લગ્ન મંડપ તરફ પ્રસ્થાન કરતી જાન.",
-        en: "The majestic groom's procession with traditional decorated horse, brass bands, festive fanfare, and celebratory fireworks."
+        gu: "શણગારેલા અશ્વ, ઢોલ-નગારા, શરણાઈના નાદ અને આતશબાજીની ભવ્ય રોશની વચ્ચે લગ્ન મંડપ તરફ પ્રસ્થાન કરતી જાન ઊંઝા મુકામે જશે.",
+        en: "The majestic groom's procession with traditional decorated horse, brass bands, festive fanfare, and celebratory fireworks as the jaan proceeds towards Unjha."
       },
       image: "images/ceremony_baraat.jpg",
       symbol: "🐎"
@@ -187,8 +184,8 @@ const translations = {
     metaTitle: "પ્રિયાંશ સંગ શ્રેયા | લગ્ન નિમંત્રણ પત્રિકા",
     langToggle: "English",
     
-    // Entrance / Stamp (No "શાહી" / "royal")
-    entranceHeader: "પટેલ પરિવાર લગ્ન નિમંત્રણ પત્રિકા",
+    // Entrance / Stamp
+    entranceHeader: "ઉપેરીયા પરિવાર લગ્ન નિમંત્રણ પત્રિકા",
     entranceSubheader: "પ્રેમ અને પરંપરાનો ભવ્ય મંગલોત્સવ",
     sealInstruction: "પ્રવેશવા માટે મહોર પર સ્પર્શ કરો",
     sealSubInstruction: "ભવ્ય હવેલી મહેલમાં આપનું હાર્દિક સ્વાગત છે",
@@ -208,19 +205,19 @@ const translations = {
     groomName: "પ્રિયાંશ",
     wedsText: "સંગ",
     brideName: "શ્રેયા",
-    heroInviteText: "પરિવારના આશીર્વાદ સાથે, તેઓ આપ સૌને તેમના દાંપત્ય જીવનની મંગલ શરૂઆતમાં ભાવભર્યું આમંત્રણ પાઠવે છે.",
+    heroInviteText: "ઉપેરીયા પરિવારના આશીર્વાદ સાથે, તેઓ આપ સૌને તેમના દાંપત્ય જીવનની મંગલ શરૂઆતમાં ભાવભર્યું આમંત્રણ પાઠવે છે.",
     weddingDateHero: "૨૨ નવેમ્બર ૨૦૨૬ • ઊંઝા, મહેસાણા",
     scrollHint: "મંગલ ઉત્સવમાં આગળ વધો",
     
     // Invitation Farman
-    invitationHeading: "પરિવારના મંગલ આશીર્વાદ સાથે",
+    invitationHeading: "ઉપેરીયા પરિવારના મંગલ આશીર્વાદ સાથે",
     invitationSubtitle: "સંસ્કાર, સ્નેહ અને સમર્પણનો પવિત્ર સંગમ",
     invitationBody1: "સ્નેહ અને લાગણીના આ મંગલ અવસરે, અમારા પ્રિય સંતાનો પ્રિયાંશ અને શ્રેયાના પ્રભુતામાં પગલાં પાડવાના આ પાવન પ્રસંગે આપના આશીર્વાદ અને સ્નેહપૂર્ણ ઉપસ્થિતિની અભ્યર્થના કરીએ છીએ.",
     invitationBody2: "આપની પાવન ઉપસ્થિતિ અમારા આ મહોત્સવને વિશેષ બનાવશે અને વર-વધૂને અખંડ સૌભાગ્યના આશીર્વાદ આપશે.",
-    hostsGroom: "વર પક્ષ પરિવાર",
-    groomFamilyNames: "ઉપેરીયા પરિવાર",
-    hostsBride: "કન્યા પક્ષ પરિવાર",
-    brideFamilyNames: "પલાસરિયા પરિવાર",
+    hostsGroom: "વર પક્ષ",
+    groomFamilyNames: "પટેલ જયેશભાઈ ડાહ્યાભાઈ (ઉપેરીયા)",
+    hostsBride: "કન્યા પક્ષ",
+    brideFamilyNames: "પટેલ વિનોદભાઈ જેઠાભાઈ (પલાસરિયા)",
     rsvpLabel: "સ્નેહાધીન નિમંત્રક",
     
     // Ceremonies
@@ -265,8 +262,8 @@ const translations = {
     metaTitle: "Priyansh Weds Shreya | Wedding Invitation",
     langToggle: "ગુજરાતી",
     
-    // Entrance / Stamp (No "royal")
-    entranceHeader: "Patel Family Wedding Invitation",
+    // Entrance / Stamp
+    entranceHeader: "Uperiya Family Wedding Invitation",
     entranceSubheader: "A Celebration of Love and Tradition",
     sealInstruction: "Tap the Seal to Enter",
     sealSubInstruction: "Experience the Grand Rajasthani Mahal",
@@ -286,19 +283,19 @@ const translations = {
     groomName: "Priyansh",
     wedsText: "Weds",
     brideName: "Shreya",
-    heroInviteText: "Together with their families, they cordially invite you to celebrate the beginning of their forever.",
+    heroInviteText: "With the blessings of the Uperiya Family, they cordially invite you to celebrate the beginning of their forever.",
     weddingDateHero: "22 November 2026 • Unjha, Mehsana",
     scrollHint: "Scroll into the Celebrations",
     
     // Invitation Farman
-    invitationHeading: "With the Blessings of Our Families",
+    invitationHeading: "With the Blessings of Uperiya Family",
     invitationSubtitle: "A Sacred Union Blessed by Tradition and Divinity",
     invitationBody1: "With hearts brimming with gratitude and immense joy, we solicit your esteemed presence and benevolent blessings as our beloved children embark upon the sacred journey of matrimony.",
     invitationBody2: "Your gracious presence will sanctify their vows and make our celebration truly joyous and memorable.",
-    hostsGroom: "The Groom's Family",
-    groomFamilyNames: "Uperiya Family",
-    hostsBride: "The Bride's Family",
-    brideFamilyNames: "Palasariya Family",
+    hostsGroom: "The Groom's Side",
+    groomFamilyNames: "Patel Jayeshbhai Dahyabhai (Uperiya)",
+    hostsBride: "The Bride's Side",
+    brideFamilyNames: "Patel Vinodbhai Jethabhai (Palasariya)",
     rsvpLabel: "Cordial Welcome",
     
     // Ceremonies

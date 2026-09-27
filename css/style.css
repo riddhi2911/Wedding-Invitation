@@ -2047,7 +2047,7 @@ button {
 }
 
 /* ==========================================================================
-   RESPONSIVE DESIGN (TABLET & MOBILE OPTIMIZATIONS)
+   RESPONSIVE DESIGN (EXCLUSIVELY TUNED FOR MOBILE PHONES & TABLETS)
    ========================================================================== */
 @media (max-width: 1024px) {
   .ceremony-card-item,
@@ -2061,90 +2061,589 @@ button {
     grid-template-columns: 1fr;
     padding: 35px 25px;
   }
-
-  .memories-masonry-gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .blessings-container-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 768px) {
-  /* Navigation on Mobile */
+  /* Global Mobile Guard */
+  html, body {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden !important;
+    position: relative;
+  }
+
+  /* Section Spacing on Phone */
+  .royal-section {
+    padding: 55px 14px;
+  }
+
+  .section-header-block {
+    margin-bottom: 28px;
+    padding: 0 8px;
+  }
+
+  .section-pre-title {
+    font-size: 0.82rem;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+  }
+
+  .section-main-title {
+    font-size: clamp(1.75rem, 6.2vw, 2.25rem);
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+  }
+
+  .section-sub-title {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    max-width: 95vw;
+  }
+
+  /* 1. Mobile Palace Entrance & Wax Seal */
+  #royal-entrance {
+    height: 100vh;
+    height: 100dvh;
+    padding: 16px;
+  }
+
+  .stamp-stage {
+    padding: 12px 10px;
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .royal-seal-badge {
+    font-size: clamp(0.85rem, 3.8vw, 1.05rem);
+    letter-spacing: 2px;
+    line-height: 1.4;
+    padding: 6px 12px;
+    margin-bottom: 6px;
+  }
+
+  .royal-seal-sub {
+    font-size: 0.95rem;
+    margin-bottom: 18px;
+  }
+
+  .stamp-container {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 18px auto;
+  }
+
+  .stamp-aura {
+    width: 175px;
+    height: 175px;
+    top: -17px;
+    left: -17px;
+  }
+
+  .stamp-action-btn {
+    padding: 12px 22px;
+    font-size: 0.92rem;
+    min-height: 48px;
+    border-radius: 30px;
+  }
+
+  .stamp-sub-hint {
+    font-size: 0.82rem;
+    margin-top: 6px;
+  }
+
+  .entrance-corner-diyas {
+    bottom: 12px;
+    padding: 0 16px;
+    transform: scale(0.8);
+    transform-origin: bottom center;
+  }
+
+  /* 2. Mobile Navigation Bar */
+  .royal-navbar {
+    height: 58px;
+  }
+
+  .nav-container {
+    padding: 8px 12px;
+  }
+
+  .nav-monogram-circle {
+    width: 38px;
+    height: 38px;
+    font-size: 0.95rem;
+  }
+
+  .nav-actions {
+    gap: 8px;
+  }
+
+  .lang-switch-btn {
+    padding: 6px 12px;
+    font-size: 0.82rem;
+    min-height: 38px;
+    border-radius: 20px;
+  }
+
+  .music-toggle-btn {
+    padding: 6px 10px;
+    font-size: 0.78rem;
+    min-height: 38px;
+    border-radius: 20px;
+  }
+
   .mobile-nav-toggle {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    font-size: 1.3rem;
+    background: rgba(62, 11, 19, 0.7);
+    border: 1px solid rgba(200, 157, 60, 0.4);
+    border-radius: 8px;
+    color: var(--color-gold-bright);
+    cursor: pointer;
   }
 
   .nav-menu-links {
     position: fixed;
-    top: 70px;
+    top: 58px;
     left: 0;
     width: 100%;
-    background: rgba(25, 4, 8, 0.98);
+    background: rgba(22, 3, 7, 0.98);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     flex-direction: column;
-    padding: 30px 20px;
-    gap: 18px;
+    padding: 24px 16px;
+    gap: 12px;
     border-bottom: 2px solid var(--color-gold-base);
-    transform: translateY(-120%);
+    transform: translateY(-130%);
     transition: transform 0.4s ease;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9);
   }
 
   .nav-menu-links.mobile-open {
     transform: translateY(0);
   }
 
-  /* Entrance Stamp on Mobile */
-  .stamp-container {
-    width: 160px;
-    height: 160px;
+  .nav-link {
+    font-size: 1.05rem;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(200, 157, 60, 0.15);
+    width: 100%;
   }
 
-  .stamp-aura {
-    width: 200px;
-    height: 200px;
-    top: -20px;
-    left: -20px;
+  /* 3. Hero Palace Hall on Mobile */
+  #hero-palace-hall {
+    padding-top: 75px;
+    padding-bottom: 40px;
+    min-height: 100vh;
   }
 
-  /* Story Timeline Single Column */
-  .story-timeline-stage::before {
-    left: 20px;
+  .auspicious-invitation-badge {
+    margin-bottom: 10px;
   }
 
-  .timeline-item-row,
-  .timeline-item-row:nth-child(even) {
-    flex-direction: row;
-    margin-bottom: 40px;
+  .shubh-vivah-tag {
+    font-size: 0.9rem;
+    padding: 5px 16px;
   }
 
-  .timeline-dot-mandala {
-    left: 20px;
+  .ganesh-shlok-text {
+    font-size: clamp(0.92rem, 3.8vw, 1.15rem);
+    line-height: 1.7;
+    padding: 12px 14px;
+    max-width: 92vw;
+    margin: 0 auto 16px auto;
+    border-radius: 12px;
+    background: rgba(25, 4, 8, 0.65);
+    border: 1px solid rgba(228, 190, 93, 0.35);
   }
 
-  .timeline-card-box {
-    width: calc(100% - 60px);
-    margin-left: 60px;
+  .couple-frame-stage {
+    max-width: 250px;
+    width: 75vw;
+    margin: 10px auto 20px auto;
   }
 
-  /* Memories 1 Column on Small Mobile */
-  .memories-masonry-gallery {
-    grid-template-columns: 1fr;
+  .jharokha-arch-border {
+    padding: 10px;
+    border-radius: 150px 150px 14px 14px;
+    border-width: 2px;
+  }
+
+  .jharokha-inner-photo {
+    border-radius: 140px 140px 10px 10px;
+  }
+
+  .couple-aura-glow {
+    inset: -8px;
+    border-radius: 160px 160px 20px 20px;
+  }
+
+  .jharokha-side-diya {
+    display: none !important;
+  }
+
+  .couple-royal-names {
+    margin: 10px 0 14px 0;
+  }
+
+  .name-groom,
+  .name-bride {
+    font-size: clamp(2.2rem, 8vw, 3rem);
+    letter-spacing: 2px;
+    line-height: 1.2;
+  }
+
+  .weds-divider {
+    margin: 6px 0;
+  }
+
+  .weds-text {
+    font-size: 1.2rem;
+  }
+
+  .hero-invitation-subtext {
+    font-size: 0.98rem;
+    line-height: 1.8;
+    max-width: 92vw;
+    padding: 0 8px;
+    margin-bottom: 16px;
+  }
+
+  .hero-wedding-date {
+    font-size: 0.92rem;
+    padding: 8px 18px;
+    margin-bottom: 24px;
+  }
+
+  /* 4. Farman / Invitation Panel on Mobile */
+  #invitation-panel {
+    padding: 50px 12px;
+  }
+
+  .farman-scroll-card {
+    padding: 28px 16px 32px 16px;
+    border-radius: 16px;
+    margin: 0 4px;
+  }
+
+  .farman-corner {
+    display: none;
+  }
+
+  .farman-ganesh-icon {
+    font-size: 2.2rem;
+    margin-bottom: 6px;
+  }
+
+  .farman-blessing-header {
+    font-size: clamp(1.4rem, 5.5vw, 1.9rem);
+    line-height: 1.35;
+    margin-bottom: 14px;
+  }
+
+  .farman-body-text {
+    font-size: 0.98rem;
+    line-height: 1.85;
+    margin-bottom: 16px;
   }
 
   .families-tribute-grid {
     grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 24px;
   }
 
-  .farman-scroll-card {
-    padding: 40px 20px;
+  .family-tribute-card {
+    padding: 16px 14px;
+    border-radius: 12px;
+    background: rgba(30, 4, 8, 0.7);
+    border: 1.5px solid var(--color-gold-base);
+  }
+
+  .family-role-tag {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+  }
+
+  .family-names-list {
+    font-size: 1.15rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #fff;
+  }
+
+  /* 5. Ceremonies Section on Mobile */
+  #ceremonies-section {
+    padding: 50px 12px;
+  }
+
+  .ceremonies-cards-container {
+    gap: 24px;
+  }
+
+  .ceremony-card-item,
+  .ceremony-card-item.reverse {
+    grid-template-columns: 1fr;
+    direction: ltr !important;
+    padding: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    gap: 0;
+    background: rgba(24, 3, 7, 0.92);
+    border: 1.5px solid rgba(200, 157, 60, 0.4);
+  }
+
+  .ceremony-visual-wrap {
+    height: 200px;
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .ceremony-visual-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ceremony-symbol-badge {
+    top: 10px;
+    right: 10px;
+    width: 42px;
+    height: 42px;
+    font-size: 1.25rem;
+  }
+
+  .ceremony-details-col {
+    padding: 18px 16px 20px 16px;
+    text-align: left;
+  }
+
+  .ceremony-tagline {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+  }
+
+  .ceremony-name {
+    font-size: clamp(1.4rem, 5.5vw, 1.75rem);
+    line-height: 1.25;
+    margin-bottom: 10px;
+  }
+
+  .ceremony-time-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    border-radius: 0 8px 8px 0;
+    background: rgba(14, 2, 4, 0.85);
+  }
+
+  .ceremony-venue-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    padding: 8px 12px;
+    margin-bottom: 12px;
+    border-radius: 0 8px 8px 0;
+    font-size: 0.92rem;
+    background: rgba(14, 2, 4, 0.85);
+  }
+
+  .ceremony-desc-text {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: rgba(246, 239, 224, 0.92);
+    margin-bottom: 0;
+  }
+
+  /* 6. Venue Section on Mobile */
+  #venue-section {
+    padding: 50px 12px;
+  }
+
+  .venue-card-wrapper {
+    grid-template-columns: 1fr;
+    padding: 18px 14px;
+    gap: 20px;
+    border-radius: 16px;
+  }
+
+  .venue-info-block {
+    text-align: center;
+  }
+
+  .venue-palace-icon {
+    font-size: 2.2rem;
+    margin-bottom: 6px;
+  }
+
+  .venue-destination-name {
+    font-size: clamp(1.35rem, 5vw, 1.75rem);
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+
+  .venue-district-name {
+    font-size: 0.95rem;
+    margin-bottom: 14px;
+  }
+
+  .venue-directions-card {
+    padding: 14px 12px;
+    margin-bottom: 18px;
+    text-align: left;
+    font-size: 0.92rem;
+    line-height: 1.7;
+  }
+
+  .venue-action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .venue-action-buttons .btn-royal-primary,
+  .venue-action-buttons .btn-royal-secondary {
+    width: 100%;
+    min-height: 48px;
+    justify-content: center;
+    font-size: 0.98rem;
+    border-radius: 30px;
+  }
+
+  .venue-map-frame {
+    aspect-ratio: 4/3;
+    width: 100%;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-top: 10px;
+  }
+
+  .venue-map-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* 7. Countdown on Mobile */
+  #countdown-section {
+    padding: 50px 12px;
+  }
+
+  .countdown-boxes-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    justify-content: center;
   }
 
   .countdown-box-card {
-    width: 130px;
-    padding: 18px 10px;
+    width: 100%;
+    min-width: 0;
+    padding: 14px 3px;
+    border-radius: 12px;
+    border-width: 1.5px;
+  }
+
+  .countdown-num-val {
+    font-size: clamp(1.35rem, 5vw, 1.8rem);
+    font-weight: 700;
+  }
+
+  .countdown-label-text {
+    font-size: 0.72rem;
+    letter-spacing: 0.5px;
+    margin-top: 4px;
+  }
+
+  .countdown-live-banner {
+    font-size: 0.95rem;
+    margin-top: 20px;
+    padding: 0 10px;
+  }
+
+  /* 8. Finale on Mobile */
+  #royal-finale {
+    min-height: 60vh;
+    padding: 50px 16px 40px;
+  }
+
+  .finale-monogram-emblem {
+    width: 65px;
+    height: 65px;
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+  }
+
+  .finale-names-title {
+    font-size: clamp(1.9rem, 7vw, 2.6rem);
+    margin-bottom: 10px;
+  }
+
+  .finale-date-badge {
+    font-size: 0.92rem;
+    padding: 6px 18px;
+    margin-bottom: 14px;
+  }
+
+  .finale-quote-text {
+    font-size: 1.05rem;
+    margin-bottom: 14px;
+  }
+
+  .finale-blessing-wish {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    max-width: 92vw;
+  }
+
+  /* 9. Footer on Mobile */
+  .royal-palace-footer {
+    padding: 24px 14px;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    text-align: center;
+  }
+}
+
+/* Extra Compact Phones (<440px) */
+@media (max-width: 440px) {
+  .nav-brand-text {
+    display: none;
+  }
+
+  .music-toggle-btn .music-playing-label,
+  .music-toggle-btn .music-toggle-text {
+    display: none;
+  }
+
+  .music-toggle-btn {
+    padding: 6px 10px;
+    min-width: 42px;
+    justify-content: center;
+  }
+
+  .countdown-num-val {
+    font-size: 1.35rem;
+  }
+
+  .countdown-label-text {
+    font-size: 0.68rem;
   }
 }
